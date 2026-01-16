@@ -1,6 +1,15 @@
 <?php
-$conn = new mysqli("localhost", "root", "", "TikaTrack");
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "TikaTrack";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
 if ($conn->connect_error) {
-    die("Database connection failed");
+    die("Database connection failed: " . $conn->connect_error);
 }
+
+session_start();
 ?>
+
