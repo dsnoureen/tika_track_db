@@ -7,7 +7,7 @@ function login(){
     password:password.value
   })
  }).then(r=>r.json()).then(d=>{
-   if(d.status==="success") location.href="dashboard.html";
+   if(d.status==="success") location.href="index.php";
    else alert("Invalid login");
  });
 }

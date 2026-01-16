@@ -1,5 +1,5 @@
 <?php
-include "connection.php";
+include "db.php";
 include "functions.php";
 requireLogin();
 ?>
