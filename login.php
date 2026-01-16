@@ -12,34 +12,6 @@ if($user && password_verify($data['password'],$user['password'])){
 }
 ?>
 
-<?php
-include "connection.php";
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $phone = $_POST['phone'];
-    $password = $_POST['password'];
-
-    $q = $conn->query("SELECT * FROM users WHERE phone='$phone'");
-    $user = $q->fetch_assoc();
-
-    if ($user && password_verify($password, $user['password'])) {
-
-        $hid = $conn->query("
-            SELECT health_id FROM health_id WHERE user_id={$user['user_id']}
-        ")->fetch_assoc();
-
-        $_SESSION['user_id']  = $user['user_id'];
-        $_SESSION['name']     = $user['name'];
-        $_SESSION['role']     = $user['role'];
-        $_SESSION['health_id']= $hid['health_id'];
-
-        header("Location: index.php");
-        exit;
-    } else {
-        $error = "Invalid phone or password";
-    }
-}
-?>
 
 <!DOCTYPE html>
 <html>
