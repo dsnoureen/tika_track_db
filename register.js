@@ -26,11 +26,11 @@ function registerUser() {
   })
   .then(res => res.json())
   .then(data => {
-    console.log(data); // 👈 debugging
+    console.log(data); 
 
     if (data.status === "success") {
       alert("Registration successful");
-      window.location.href = "login.html";
+      window.location.href = "login.php";
     } else {
       alert("Registration failed");
     }

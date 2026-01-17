@@ -13,7 +13,7 @@ if ($user && password_verify($data['password'], $user['password'])) {
         SELECT health_id FROM health_id WHERE user_id={$user['user_id']}
     ")->fetch_assoc();
 
-    // ✅ SET SESSIONS
+
     $_SESSION['user_id']   = $user['user_id'];
     $_SESSION['name']      = $user['name'];
     $_SESSION['role']      = $user['role'];
