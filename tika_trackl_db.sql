@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2026 at 12:29 PM
+-- Generation Time: Jan 17, 2026 at 02:32 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -116,6 +116,36 @@ CREATE TABLE `vaccines` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `vaccines`
+--
+
+INSERT INTO `vaccines` (`vaccine_id`, `disease_name`, `vaccine_name`, `total_doses`, `age`) VALUES
+(1, 'Tuberculosis', 'BCG', 1, 'At birth'),
+(2, 'Polio', 'OPV', 4, '0, 6, 10, 14 weeks'),
+(3, 'Polio', 'IPV', 2, '14 weeks, 4 years'),
+(4, 'Diphtheria, Pertussis, Tetanus, Hepatitis B, Hib', 'Pentavalent', 3, '6, 10, 14 weeks'),
+(5, 'Pneumococcal disease', 'PCV', 3, '6, 10, 14 weeks'),
+(6, 'Measles and Rubella', 'MR', 2, '9 months, 15 months'),
+(7, 'Tetanus and Diphtheria', 'Td', 2, '10 years, 15 years'),
+(8, 'COVID-19', 'Pfizer-BioNTech', 2, '12+ years'),
+(9, 'COVID-19', 'Moderna', 2, '18+ years'),
+(10, 'COVID-19', 'AstraZeneca', 2, '18+ years'),
+(11, 'COVID-19', 'Sinopharm', 2, '18+ years'),
+(12, 'Hepatitis A', 'Hepatitis A', 2, '1+ years'),
+(13, 'Hepatitis B', 'Hepatitis B', 3, 'All ages'),
+(14, 'Typhoid', 'Typhoid Conjugate Vaccine (TCV)', 1, '6 months+'),
+(15, 'Cholera', 'Oral Cholera Vaccine (OCV)', 2, '1+ years'),
+(16, 'Rabies', 'Rabies Vaccine', 5, 'All ages'),
+(17, 'Meningococcal meningitis', 'Meningococcal Vaccine', 1, '2+ years'),
+(18, 'Human Papillomavirus', 'HPV Vaccine', 2, '9–14 years'),
+(19, 'Seasonal Influenza', 'Influenza Vaccine', 1, '6 months+ (yearly)'),
+(20, 'Chickenpox', 'Varicella', 2, '1+ years'),
+(21, 'Measles, Mumps, Rubella', 'MMR', 2, '1+ years'),
+(22, 'Japanese Encephalitis', 'JE Vaccine', 2, '9 months+'),
+(23, 'Tetanus', 'TT', 5, '15–49 years (women)'),
+(24, 'Pneumococcal disease', 'PPSV23', 1, '50+ years');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -206,7 +236,7 @@ ALTER TABLE `vaccination_records`
 -- AUTO_INCREMENT for table `vaccines`
 --
 ALTER TABLE `vaccines`
-  MODIFY `vaccine_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `vaccine_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- Constraints for dumped tables
